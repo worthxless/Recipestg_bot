@@ -1,1 +1,6 @@
-SCHOOL_DAYS_OF_WEEK = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+BOT_TOKEN = os.getenv('BOT_TOKEN')
