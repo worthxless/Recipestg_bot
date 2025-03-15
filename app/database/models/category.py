@@ -11,7 +11,7 @@ class Category(Base):
     title = Column(String(50), nullable=True)
     description = Column(String(50), nullable=True)
 
-    meals = relationship('Meal', secondary='MealCategory', backref=backref('cats', lazy='dynamic'))
+    meals = relationship('Meal', secondary='meal_category', back_populates='cats')
 
     def __repr__(self) -> str:
         return f"<Category(title={self.title})>"

@@ -14,8 +14,8 @@ class Meal(Base):
     price = Column(Integer, nullable=True)
     image_id = Column(Integer, default=0)
 
-    image = relationship('Image', foreign_keys='Meal.image_id')
-    cats = relationship('Category', secondary='MealCategory', backref=backref('meals', lazy='dynamic'))
+    # image = relationship('Image', foreign_keys='Meal.image_id')
+    cats = relationship('Category', secondary='meal_category', back_populates='meals')
 
     def __repr__(self) -> str:
         return f"<Meal(title={self.title}, price='{self.price}')>"
