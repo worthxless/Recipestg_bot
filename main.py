@@ -4,6 +4,8 @@ from aiogram import Bot, Dispatcher
 from app.handlers import router
 
 
+print("Сука ты")
+
 async def main():
     bot = Bot(token='7554317573:AAFCXn2wtoExmUb46OZjwDa8gbirtPAMZFI')
     dp = Dispatcher()
